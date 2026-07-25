@@ -85,3 +85,32 @@ jobs:
       - run: echo "Using plan: ${{ needs.plan.outputs.plan }}"
 
 ```
+Defensive gating for pull request-only behavior
+===============================================
+
+```yaml
+name: PR Validation
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch: # allows manual runs, but still gated below
+
+jobs:
+  validate-pr:
+    # Defensive gating: only run if this is actually a PR context
+    if: github.event_name == 'pull_request'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run tests
+        run: npm test
+
+      - name: Comment on PR
+        run: echo "Validation complete"
+
+
+```
