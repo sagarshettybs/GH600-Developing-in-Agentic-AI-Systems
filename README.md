@@ -46,7 +46,7 @@ CODEOWNERS ensures that changes to sensitive areas go to the right reviewers aut
 
 
 Environments provide a strong control point for risky actions such as deployments and access to protected secrets.
-
+```yaml
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -54,3 +54,34 @@ jobs:
       name: production
     steps:
       - run: echo "Deploying to production..."
+```
+
+```yaml
+- id: generate_plan
+  run: |
+    echo "plan=high level steps..." >> "$GITHUB_OUTPUT"
+
+- run: |
+    echo "Plan: ${{ steps.generate_plan.outputs.plan }}"
+
+```
+
+
+For cross-job sharing, publish a job output and reference it from a dependent job:
+====================================================================================
+```yaml
+
+jobs:
+  plan:
+    outputs:
+      plan: ${{ steps.generate_plan.outputs.plan }}
+    steps:
+      - id: generate_plan
+        run: echo "plan=..." >> "$GITHUB_OUTPUT"
+
+  implement:
+    needs: plan
+    steps:
+      - run: echo "Using plan: ${{ needs.plan.outputs.plan }}"
+
+```
