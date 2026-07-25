@@ -43,3 +43,14 @@ CODEOWNERS ensures that changes to sensitive areas go to the right reviewers aut
 /.github/workflows/ @platform-team
 /infra/ @platform-team
 * @core-team
+
+
+Environments provide a strong control point for risky actions such as deployments and access to protected secrets.
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+    steps:
+      - run: echo "Deploying to production..."
