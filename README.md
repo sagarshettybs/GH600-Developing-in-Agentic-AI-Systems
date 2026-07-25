@@ -114,3 +114,39 @@ jobs:
 
 
 ```
+
+Uploading artifacts makes evidence durable and reviewable, even when logs scroll away.
+====================================================================================
+```yaml
+- name: Upload test results
+  uses: actions/upload-artifact@v4
+  with:
+    name: test-results
+    path: results/
+```
+
+For deeper reading, use official GitHub documentation on:
+=========================================================
+Creating a pull request template for your repository -- https://docs.github.com/es/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository
+
+Managing rulesets for a repository -- https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/managing-rulesets-for-a-repository
+
+Available rules for rulesets -- https://docs.github.com/enterprise-cloud@latest/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets
+
+Troubleshooting required status checks -- https://docs.github.com/en/enterprise-server@3.16/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks
+
+Using GITHUB_TOKEN for authentication in workflows -- https://docs.github.com/en/actions/configuring-and-managing-workflows/authenticating-with-the-github_token
+
+Security hardening for GitHub Actions -- https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions
+
+Environments -- https://docs.github.com/en/actions/reference/environments
+
+Uploading an artifact in a workflow -- https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts
+
+Uploading a SARIF file to GitHub -- https://docs.github.com/en/code-security/how-tos/scan-code-for-vulnerabilities/integrate-with-existing-tools/uploading-a-sarif-file-to-github
+
+Protecting pushes with secret scanning (push protection) -- https://docs.github.com/code-security/secret-scanning/protecting-pushes-with-secret-scanning
+
+Using hooks with GitHub Copilot agents -- https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/use-hooks
+
+Tracking GitHub Copilot's sessions -- https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/track-copilot-sessions
