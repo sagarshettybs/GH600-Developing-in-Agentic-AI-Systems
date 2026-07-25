@@ -33,3 +33,13 @@ All checks pass + approvals complete
 Pull request can be merged
 
 This structure ensures that execution is gated by both automation and human review.
+
+
+CODEOWNERS ensures that changes to sensitive areas go to the right reviewers automatically.
+===========================================================================================
+# File: CODEOWNERS
+
+/security/ @security-team
+/.github/workflows/ @platform-team
+/infra/ @platform-team
+* @core-team
