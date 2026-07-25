@@ -11,4 +11,25 @@ Learn how AI coding agents are transforming software development by planning, ac
 			§ https://learn.microsoft.com/en-us/training/modules/agent-tooling-mcp-execution-environments/
 	
 		○ https://learn.microsoft.com/en-us/training/modules/design-agent-architecture-integration/
+		
 
+A common safe workflow looks like this:
+====================================
+Agent creates branch
+
+↓
+Agent opens pull request (includes plan)
+
+↓
+Required reviews validate approach
+
+↓
+GitHub Actions run required checks
+
+↓
+All checks pass + approvals complete
+
+↓
+Pull request can be merged
+
+This structure ensures that execution is gated by both automation and human review.
