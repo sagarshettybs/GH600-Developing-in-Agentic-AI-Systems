@@ -150,3 +150,23 @@ Protecting pushes with secret scanning (push protection) -- https://docs.github.
 Using hooks with GitHub Copilot agents -- https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/use-hooks
 
 Tracking GitHub Copilot's sessions -- https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/track-copilot-sessions
+
+
+A GitHub Agentic Workflow has two main parts:
+=============================================
+Frontmatter for configuration such as triggers, permissions, tools, and safe outputs
+Markdown instructions that describe the job in natural language
+The Markdown expresses intent, while the frontmatter defines the boundaries. The workflow is then compiled into a lock file that GitHub Actions executes.
+
+on: schedule: daily
+permissions: contents: read issues: read pull-requests: read
+safe-outputs: create-issue: title-prefix: "[repo-status] " labels: [report]
+tools: github:
+
+Daily Repository Status Report
+Create a daily report for maintainers.
+Include:
+Recent activity (issues, PRs, commits)
+Key highlights and risks
+Recommended next steps
+Keep the report concise and link to relevant issues and pull requests.
