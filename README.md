@@ -170,3 +170,17 @@ Recent activity (issues, PRs, commits)
 Key highlights and risks
 Recommended next steps
 Keep the report concise and link to relevant issues and pull requests.
+
+
+
+About GitHub Copilot coding agent -- https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent
+Automate repository tasks with GitHub Agentic Workflows -- https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/
+GitHub Agentic Workflows (gh-aw) -- https://github.github.com/gh-aw/
+Responsible use of Copilot coding agent -- https://docs.github.com/en/copilot/responsible-use/copilot-coding-agent
+Workflow syntax for GitHub Actions -- https://docs.github.com/actions/using-workflows/workflow-syntax-for-github-actions
+Events that trigger workflows -- https://docs.github.com/actions/using-workflows/events-that-trigger-workflows
+Managing GitHub Actions permissions -- https://docs.github.com/en/actions/security-guides/automatic-token-authentication
+Using environments for deployment -- https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment
+Using the GitHub MCP Server -- https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/use-the-github-mcp-server
+Configure MCP registry -- https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/configure-mcp-registry
+Configure MCP server access -- https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/configure-mcp-server-access
